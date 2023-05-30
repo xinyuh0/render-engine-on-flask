@@ -1,0 +1,34 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    {{{ num=0}}}
+    <h1>This is a test page for flask-based render framework</h1>
+
+    <h2>Render variable from server:</h2>
+    <div>User name: {{{user_name}}}</div>
+    <div>User age: {{{ user_age }}}</div>
+    <div>User department: {{{user_department}}}</div>
+
+    <h2>Render variable from template:</h2>
+    <div>Variable: {{{num}}}</div>
+    <div>Change on Variable: {{{ num+1 }}}</div>
+
+    <h2>Render list:</h2>
+    {{{
+        for i in range(10):
+            print("<div>list item " + str(i) + "</div>")
+    }}}
+
+    <h2>If-else:</h2>
+    {{{
+        if is_undergraduate:
+            print("The user is undergraduate student")
+        else:
+            print("The user is not undergraduate student")
+    }}}
+</body>
